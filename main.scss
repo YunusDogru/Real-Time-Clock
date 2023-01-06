@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(220, 7%, 16%);
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+  
+}
+
+.clock-wrap {
+    height: 380px;
+    width: 380px;
+    min-width: 380px;
+    min-height: 380px;
+    border-radius: 50%;
+    border: 7px solid #000;
+    box-shadow: 0 20px 20px 5px #1a1a1c, 0 -10px 20px 5px #434549;
+
+    .clock {
+        width: 100%;
+        height: 100%;
+        border: 7px solid #a1a3ae;
+        outline: 2px solid #7e818a;
+        border-radius: 50%;
+        background-color: #383a3e;
+        box-shadow: inset 0 5px 15px 15px #2e3034, inset 0 -5px 15px 15px #3e4044;
+
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #9699a2;
+        }
+
+        .top {
+            font-size: 35px;
+            transform: translate(-50%, -50%);
+            top: calc(50% - 150px);
+        }
+
+        .left {
+            font-size: 35px;
+            transform: translate(-50%, -50%);
+            left: calc(50% - 150px);
+        }
+
+        .bottom {
+            font-size: 35px;
+            transform: translate(-50%, -50%);
+            top: calc(50% + 150px);
+        }
+
+        .right {
+            font-size: 35px;
+            transform: translate(-50%, -50%);
+            left: calc(50% + 150px);
+        }
+
+        .hour {
+            width: 10px;
+            height: 100px;
+            transform-origin: 50% 0;
+            background-color: #fefefe;
+            border-radius: 4px;
+            box-shadow: 1px 1px 10px 0 #35373b;
+        }
+
+        .min {
+            width: 10px;
+            height: 130px;
+            transform-origin: 50% 0;
+            background-color: #fefefe;
+            border-radius: 4px;
+            box-shadow: 1px 1px 10px 0 #35373b;
+        }
+
+        .sec {
+            width: 3px;
+            height: 180px;
+            transform-origin: 50% 16%;
+            top: calc(50% - 30px);
+            background-color: #fd3a41;
+            border-radius: 4px;
+            z-index: 1;
+
+            
+        }
+
+        .circle-1 {
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            background-color: #fefefe;
+            transform: translate(-50%, -50%);
+        }
+
+        .circle-2 {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            border: 1px solid darken(#fd3a41, 2%);
+            background-color: #fd3a41;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+
+        }
+
+    }
+}
